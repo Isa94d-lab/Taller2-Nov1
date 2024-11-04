@@ -1,0 +1,84 @@
+/* Importamos el tipo de letra que usaremos */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* Le damos propiedades a los elementos que se encuentran dentro de la clase "child" */
+.child{
+    /* Que cada uno se encuentre en el centro */
+    text-align: center;
+    /* Color de letra */
+    color: rgb(0, 0, 0);
+    /* Espacio interno */
+    padding: 15px;
+    max-width: 50%;
+    /* Color y tama;o del borde */
+    border: 2px solid #1cd33b;
+    /* Suavidad */
+    border-radius: 10px;
+    /* Margen */
+    margin: 10px;
+    /* Tama;o de letra */
+    font-size: 15px;
+
+    display: inline-block;
+}
+
+/* Aqui hice que el programa solo le aplicara la siguiente propiedad a los elementos impares que estan dentro del contenedor 1, dentro de la clase "parent1" */
+.parent1 > .child1:nth-child(odd) {
+    background-color: #00ff2a;
+}
+
+body{
+    /* Establecemos las propiedades del cuerpo de la pagina */
+    margin: 0;
+    /* Esto es para establecer la imagen de fondo de la pagina */
+    background-image: url(../image/pixelcut-export.jpeg);
+    /* Esta propiedad hace que la imagen se ajuste al fondo donde fue agregada */
+    background-size: cover;
+    /* Esto para que la imagen introducida anteriormente NO se repita*/
+    background-repeat: no-repeat;
+
+    /* Esto es para establecer el tipo de letra */
+    font-family: "Roboto Mono", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    /* Posicion de la info*/
+    /*
+    margin-top: 160px;
+    margin-left: 220px;*/
+
+}
+
+/* Establesco la posicion de los 3 conteiners*/
+.conteiner1 {
+    /* Estacio desde la parte de arriba de la pagina hasta lo que se encuentra dentro de la clase conteiner1*/
+    margin-top: 160px;
+    /* Estacio desde la parte izquierda de la pagina hasta lo que se encuentra dentro de la clase conteiner1*/
+    margin-left: 220px;
+} 
+
+.conteiner2 {
+    margin-top: 50px;
+    margin-left: 220px;
+}
+
+.conteiner3{
+    margin-top: 50px;
+    margin-left: 220px;
+}
+
+/* Esto hace que solo se le aplique los siguientes parametros a los elementos que esten dentro de la clase .parent2, tengan el <span> y sean impares*/
+.parent2 > span:nth-child(odd) {
+    background-color: #00ff2a ;
+    pointer-events: none ; 
+  
+}
+
+/* Se le aplicara la siguiente propiedad a estos elementos en especifico que hacen parte de la clase "parent3"*/
+.parent3 > span:nth-child(1),
+/* A pesar de haber colocado aqui el elemento 3, no se le aplicara la propiedad ya que SOLO se le aplicaria si tubiera el <span> pero NO lo tiene*/
+.parent3 > span:nth-child(3),
+.parent3 > span:nth-child(4),
+.parent3 > span:nth-child(6),
+.parent3 > span:nth-child(8) {
+    background-color: #00ff2a;
+    }

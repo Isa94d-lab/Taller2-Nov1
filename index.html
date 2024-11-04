@@ -1,0 +1,58 @@
+<!-- Primero colocamos los parametros necesarios para iniciar -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Creamos el primer contenedor que contendra la primer parte de nuestra pagina -->
+    <div class="conteiner1">
+        <div class="Titulo1">Los hijos 1, 3, 5 y 7 seran seleccionados</div>
+        <!-- En esta clase guardaremos los distintos elementos los cuales iran cambiando de propiedades segun la situacion lo amerite y asi con los siguientes 2 conteiners-->
+        <div class="parent parent1">
+            <!-- Creo la misma clase para cada elemento ya se les aplicaran algunas propiedades generales que tendran la mayoria de elementos-->
+            <div class="child child1">Span 1!</div>
+            <div class="child child1">Span 2</div>
+            <div class="child child1">Span 3!</div>
+            <div class="child child1">Span 4</div>
+            <div class="child child1">Span 5!</div>
+            <div class="child child1">Span 6</div>
+            <div class="child child1">Span 7!</div>
+        </div>
+    </div>
+
+    <div class="conteiner1 conteiner2">
+        <div class="Titulo1">Los hijos 1, 5 y 7 seran seleccionados, el 3 sera ignorado </div>
+        <div class="parent parent2">
+            <!-- En este caso en vez de usar div, usamos span y em ya que es un requerimiento del enunciado aunque sirve para diferenciarse entre si, apesar de que generalmente tienen la misma funcion -->
+            <span class="child child2">Span 1!</span>
+            <span class="child child2">Span 2</span>
+            <!-- El enunciado nos pide que no se le apliquen algunas propiedad al 3 ya que no esta usando el <span> -->
+            <em class="child child2">Este es un "em"</em>
+            <span class="child child2">Span 4</span>
+            <span class="child child2">Span 5!</span>
+            <span class="child child2">Span 6</span>
+            <span class="child child2">Span 7!</span>
+            <span class="child child2">Span 8</span>
+        </div>
+    </div>
+
+    <div class="conteiner1 conteiner3">
+        <div class="Titulo1">Los hijos 1, 4, 6 y 8 seran seleccionados, el 3 sera ignorado por usar <em> en luagr de <span></div>
+        <div class="parent parent3">
+            <!-- Similar a lo mencionado anteriormente -->
+            <span class="child child3">Span 1!</span>
+            <span class="child child3">Span 2</span>
+            <em class="child child3">Este es un "em"</em>
+            <span class="child child3">Span 4!</span>
+            <span class="child child3">Span 5</span>
+            <span class="child child3">Span 6!</span>
+            <span class="child child3">Span 7</span>
+            <span class="child child3">Span 8!</span>
+        </div>
+    </div>
+</body>
+</html>
